@@ -7,10 +7,8 @@
     xmlns:pages="clr-namespace:OneVaultApp.Maui.Pages"
     Title="OneVaultApp.Maui"
     Shell.FlyoutBehavior="Disabled">
-
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate pages:LoginPage}"
         Route="LoginPage" />
-
 </Shell>
