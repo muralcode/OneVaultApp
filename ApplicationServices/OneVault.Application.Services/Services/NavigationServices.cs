@@ -44,5 +44,10 @@ namespace OneVault.ApplicationServices.Services
 
             return success;
         }
+
+        public async Task PopAsync()
+        {
+            await Shell.Current.Navigation.PopAsync();
+        }
     }
 }

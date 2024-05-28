@@ -6,19 +6,24 @@ namespace OneVaultApp.Maui.ViewModels
     public sealed class QrCodeScanPageViewModel: BaseViewModel
     {
        private readonly IPermissionService _permissionService;
+       private readonly INavigationService _navigationService;
 
        private string? _qrCodeText;
        private bool _isPermissionGranted = false;
 
-        public QrCodeScanPageViewModel(IPermissionService permissionService) 
+        public QrCodeScanPageViewModel(IPermissionService permissionService, INavigationService navigationService) 
         {
             _permissionService = permissionService;
+            _navigationService = navigationService;
+
             StartScanCommand = new Command(StartScan);
             QrCodeDetectedCommand = new Command<string>(QrCodeDetected);
+            BackCommand = new Command(NavigateBack);
         }
 
         public ICommand StartScanCommand { get; }
         public ICommand QrCodeDetectedCommand { get; }
+        public ICommand BackCommand { get; }
 
         public string? QrCodeText
         {
@@ -59,5 +64,10 @@ namespace OneVaultApp.Maui.ViewModels
 
             QrCodeText = barcodeText;
         }
+
+        private async void NavigateBack() 
+        {
+           await _navigationService.PopAsync();   
+        } 
     }
 }
