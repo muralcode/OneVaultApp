@@ -14,8 +14,6 @@ namespace OneVaultApp.Maui.ViewModels
         private string? _currentAccessToken;
         private string? _editorText;
 
-        private ICommand _navCommand;
-
         public LoginPageViewModel(IAuthenticationService authenticationService, INavigationService navigationService) 
         {
             _authenticationService = authenticationService;
@@ -23,12 +21,12 @@ namespace OneVaultApp.Maui.ViewModels
 
             LoginCommand = new Command(async () => await LoginAsync());
             ApiCommand = new Command(async () => await CallApiAsync());
+            NavigateCommand = new Command(async () => await NavigateToScanPage());
         }
 
         public ICommand LoginCommand { get; }
         public ICommand ApiCommand { get; }
-        public ICommand NavigateCommand => _navCommand ??= new Command(NavigateToScanPage);
-
+        public ICommand NavigateCommand { get; }
 
         public string? EditorText
         {
@@ -81,9 +79,9 @@ namespace OneVaultApp.Maui.ViewModels
             }
         }
 
-        private void NavigateToScanPage(object obj)
+        private async Task NavigateToScanPage()
         {
-            _navigationService.GoToAsync(AppRoutes.QrCodeScanRoute);
+            await _navigationService.GoToAsync(AppRoutes.QrCodeScanRoute);
         }
     }
 }
