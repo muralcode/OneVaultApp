@@ -10,7 +10,6 @@ namespace OneVaultApp.Maui.ViewModels
         private readonly IAuthenticationService _authenticationService;
         private readonly INavigationService _navigationService;
 
-
         private string? _currentAccessToken;
         private string? _editorText;
 
