@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Main", "Main", "{ECAB763C-3394-4854-A2F8-A63C92EB6189}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApplicationCore", "ApplicationCore", "{C8714C4C-1F85-4304-9804-EC8840582C09}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApplicationServices", "ApplicationServices", "{B2A2F9F3-6962-4082-86AB-F6110A0DD64E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OneVault.ApplicationCore", "ApplicationCore\OneVault.Application.Code\OneVault.ApplicationCore.csproj", "{06A845FE-4625-47AA-B843-D6E6A8E6321A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OneVault.ApplicationServices", "ApplicationServices\OneVault.Application.Services\OneVault.ApplicationServices.csproj", "{F22C6CB1-96EB-4BDD-AE66-A703D8638F7B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OneVaultApp.Maui", "OneVaultApp.Maui\OneVaultApp.Maui.csproj", "{9D029A7E-2914-46B8-96FA-B3EC0B32E519}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06A845FE-4625-47AA-B843-D6E6A8E6321A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06A845FE-4625-47AA-B843-D6E6A8E6321A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06A845FE-4625-47AA-B843-D6E6A8E6321A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06A845FE-4625-47AA-B843-D6E6A8E6321A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F22C6CB1-96EB-4BDD-AE66-A703D8638F7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F22C6CB1-96EB-4BDD-AE66-A703D8638F7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F22C6CB1-96EB-4BDD-AE66-A703D8638F7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F22C6CB1-96EB-4BDD-AE66-A703D8638F7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D029A7E-2914-46B8-96FA-B3EC0B32E519}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D029A7E-2914-46B8-96FA-B3EC0B32E519}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D029A7E-2914-46B8-96FA-B3EC0B32E519}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{9D029A7E-2914-46B8-96FA-B3EC0B32E519}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D029A7E-2914-46B8-96FA-B3EC0B32E519}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D029A7E-2914-46B8-96FA-B3EC0B32E519}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{06A845FE-4625-47AA-B843-D6E6A8E6321A} = {C8714C4C-1F85-4304-9804-EC8840582C09}
+		{F22C6CB1-96EB-4BDD-AE66-A703D8638F7B} = {B2A2F9F3-6962-4082-86AB-F6110A0DD64E}
+		{9D029A7E-2914-46B8-96FA-B3EC0B32E519} = {ECAB763C-3394-4854-A2F8-A63C92EB6189}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {54069193-7E5A-464D-94E7-4BE8E4E7C410}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="OneVaultApp.Maui.Pages.LoginPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Authentication">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30,0" Spacing="25">
+
+            <Label
+                SemanticProperties.HeadingLevel="Level1"
+                Style="{StaticResource Headline}"
+                Text="Duende API" />
+
+            <Button
+                BackgroundColor="LightSkyBlue"
+                BorderColor="Black"
+                BorderWidth="2"
+                Command="{Binding LoginCommand}"
+                CornerRadius="10"
+                FontAttributes="Bold"
+                FontSize="15"
+                HeightRequest="50"
+                HorizontalOptions="Fill"
+                Text="Login"
+                TextColor="Black"
+                VerticalOptions="Center"
+                WidthRequest="150" />
+            <Button
+                BackgroundColor="LightSkyBlue"
+                BorderColor="Black"
+                BorderWidth="2"
+                Command="{Binding ApiCommand}"
+                CornerRadius="10"
+                FontAttributes="Bold"
+                FontSize="15"
+                HeightRequest="50"
+                HorizontalOptions="Fill"
+                Text="Call Api"
+                TextColor="Black"
+                VerticalOptions="Center"
+                WidthRequest="150" />
+            <Frame>
+                <Editor
+                    HeightRequest="350"
+                    IsReadOnly="True"
+                    Placeholder="JWT Token"
+                    Text="{Binding EditorText}" />
+            </Frame>
+
+            <Button
+                BackgroundColor="LightSkyBlue"
+                BorderColor="Black"
+                BorderWidth="2"
+                Command="{Binding NavigateCommand}"
+                CornerRadius="10"
+                FontAttributes="Bold"
+                FontSize="15"
+                HeightRequest="50"
+                HorizontalOptions="Fill"
+                Text="Scanner"
+                TextColor="Black"
+                VerticalOptions="Center"
+                WidthRequest="150" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

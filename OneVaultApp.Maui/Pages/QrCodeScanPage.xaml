@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="OneVaultApp.Maui.Pages.QrCodeScanPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:OneVaultApp.Maui.Controls">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <controls:QrCodeReader
+            x:Name="QrCodeReaderControl"
+            Grid.Row="0"
+            HeightRequest="300"
+            OnBarcodeDetectedCommand="{Binding QrCodeDetectedCommand}" />
+
+        <Label
+            Grid.Row="1"
+            Margin="0,15,0,15"
+            FontSize="20"
+            HorizontalOptions="Center"
+            Text="Scan QR Code"
+            TextColor="Blue" />
+
+        <StackLayout
+            Grid.Row="2"
+            Margin="0,15,0,15"
+            Padding="30,0"
+            Spacing="10">
+            <Frame Padding="0" BorderColor="White">
+                <Entry
+                    x:Name="EntryBarCode"
+                    BackgroundColor="White"
+                    FontSize="18"
+                    HeightRequest="50"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Center"
+                    IsReadOnly="True"
+                    IsTextPredictionEnabled="False"
+                    Text="{Binding QrCodeText}"
+                    TextColor="Black"
+                    VerticalOptions="Center" />
+            </Frame>
+
+            <Button
+                Margin="10,15,10,15"
+                BackgroundColor="LightSkyBlue"
+                BorderColor="Black"
+                BorderWidth="2"
+                Command="{Binding StartScanCommand}"
+                CornerRadius="10"
+                FontAttributes="Bold"
+                FontSize="15"
+                HeightRequest="50"
+                HorizontalOptions="Center"
+                Text="Scan"
+                TextColor="Black"
+                VerticalOptions="Center"
+                WidthRequest="150" />
+        </StackLayout>
+    </Grid>
+</ContentPage>
